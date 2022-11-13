@@ -1,0 +1,17 @@
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registy: true
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+    instance:
+      hosname: localhost
+microservice:
+  payent-service:
+    endpoints:
+      endpoint:
+        uri:"http://payment-service/payment/dopayment"
+  order-service:
+    endpoints:
+      endpoint:
+        uri:"http://orderservice/order/bookorder"
